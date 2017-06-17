@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--Creat the angular app using ng-app-->
+<html data-ng-app="ToDoLi" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angle To Do List App</title>
+    <!--I have used jquery to give the app some styling-->
+    <link href="css/jquery.mobile-1.4.5.css" rel="stylesheet">
+    <link href="css/jquery.mobile.structure-1.4.5.css" rel="stylesheet">
+    <link href="css/Mobile.css" rel="stylesheet">
+    <link href="css/jquery.mobile.icons.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="heading">
+                <h1>Enter your To Do Items.</h1>
+            </div>
+        </header>
+        <!--Setup the angular controller-->
+        <section data-ng-controller="toDoController">
+            <!--Create form-->
+            <!--Setup add Item input that passes to the controller-->
+            <form name="toDoForm" data-ng-submit="addItem()">
+                <div class="newTask">
+                    <h2>Enter in a New Task</h2>
+                    <!--User Input field-->
+                    <input class="taskInput" type="text" name="newItem" data-ng-model="newItem" placeholder="Enter a Task" required/>
+                </div>
+                <div>
+                    <!--Button that adds user input to the controller-->
+                    <button data-ng-disabled="toDoForm.$invalid">Add New Task</button>
+                </div>
+            </form>
+            <!--List area for tasks, I have made this look like a button and allowed for a large area mark off.-->
+            <div class="mainList">
+                <ul class="lists" ng-filter>
+                    <li data-ng-repeat="todo in toDos">
+                        <div>
+                            <input class="check" type="checkbox" data-ng-model="todo.done" />
+                            <span class="todoli" data-ng-class="{'done': todo.done}">{{todo.title}}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <!--Button clears completed list items.-->
+                <button class="button2" data-ng-click="clearItem()">Clear Completed Items</button>
+            </div>
+
+        </section>
+
+
+        <footer>
+
+        </footer>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/angular.js"></script>
+    <!--Angular controller-->
+    <script src="js/todocontroller.js"></script>
+</body>
+<!--
+   References.
+   www.youtube.com
+   www.digitalskillsacademy.me
+   www.angular.io    
+-->
+
+</html>

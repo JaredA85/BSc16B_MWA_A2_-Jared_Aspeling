@@ -1,0 +1,70 @@
+/*Creates a completed task by linning through the object */
+
+.done {
+    color: red;
+    text-decoration: line-through;
+}
+
+
+/*Makes the heading a set width, creates a margin for below items*/
+
+.heading {
+    margin-bottom: 30px;
+    width: 38%;
+    background-color: lightcyan;
+    border-bottom: solid;
+    border-color: lightgray;
+}
+
+
+/*Makes the heading a set width, creates a margin for below items*/
+
+h2 {
+    margin-bottom: 20px;
+    width: 38%;
+    background-color: lightcyan;
+    border-bottom: solid;
+    border-color: lightgray;
+}
+
+
+}
+.newTask {
+    margin-bottom: 30px;
+}
+
+/*Removes list default styling*/
+ul {
+    list-style-type: none;
+}
+
+/*Creates a button effect on the list item*/
+li {
+    height: 35px;
+    width: 70%;
+    display: block;
+    border: 1px solid;
+    border-color: lightblue;
+    border-radius: 5px;
+    margin: 0 0 15px 0;
+    background-color: cornsilk;
+    box-shadow: 5px 8px grey;
+}
+
+/*Creates a hover effect*/
+li:hover {
+    background-color: lightgray;
+}
+.mainList {
+    display: block;
+}
+
+/*Changes the checkbox size and style to match the list item*/
+input[type=checkbox] {
+    float: left;
+    clear: both;
+    margin: -10px;
+    width: 102%;
+    height: 40px;
+    opacity: 0;
+}
