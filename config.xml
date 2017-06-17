@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.notreal.example" versionCode="11" version="1.0.0">
+
+
+
+    <name>ToDoLi</name>
+    <icon src="images/ToDoLi.png" platform="ios" width="180" height="180" />
+    <description>
+        This application is designed to record To Do items and display it in a list format.
+    </description>
+
+    <author href="https://build.phonegap.com" email="support@phonegap.com">
+        Jared Aspeling
+    </author>
+    <platform name="ios" />
+    <platform name="android" />
+    <platform name="winphone" />
+
+</widget>
